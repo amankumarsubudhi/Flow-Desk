@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: flowdesk-backend
+  datasource:
+    url: Add Your Database URL
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: Your Username
+    password: Your Password
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+# FlowDesk Application Configuration
+flowdesk:
+  jwt:
+    secret: Generate On Your Own For Testing
+    expiration-ms: 86400000 # 24 hours
+  billing:
+    tax-rate-percentage: 18.0 # 18% configurable tax
+    default-service-charge: 500.0
